@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mineral Water Production | KOPELADAR</title>
+    <meta name="description"
+        content="KOPELADAR's Mineral Water Production - High-quality mineral water processing and distribution.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Animation Libs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="loading">
+
+    <!-- SCROLL PROGRESS & CUSTOM CURSOR -->
+    <div id="scroll-progress"></div>
+    <div id="custom-cursor" class="custom-cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="svg-loader-wrap">
+            <svg class="svg-logo-draw" viewBox="0 0 400 100">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">KOPELADAR</text>
+            </svg>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="main-header" class="scrolled">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <img src="img/logo.png" alt="KOPELADAR Logo" class="logo-img">
+                    <span class="logo-text">KOPELADAR</span>
+                </a>
+            </div>
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html#home" data-i18n="nav-home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" data-i18n="nav-corporate">Info Korporat <i
+                                class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#chairman" data-i18n="nav-chairman">Perutusan Pengerusi</a></li>
+                            <li><a href="index.html#vision" data-i18n="nav-vision">Visi/Misi/Objektif</a></li>
+                            <li><a href="index.html#board" data-i18n="nav-board">Lembaga Kopeladar</a></li>
+                            <li><a href="index.html#management-team" data-i18n="nav-management-team">Barisan
+                                    Pengurusan</a></li>
+                            <li><a href="index.html#organization" data-i18n="nav-organization">Struktur Organisasi</a>
+                            </li>
+                            <li><a href="index.html#careers" data-i18n="nav-careers">Kerjaya</a></li>
+                            <li><a href="index.html#customer-service" data-i18n="nav-customer">Khidmat Pelanggan</a>
+                            </li>
+                            <li><a href="index.html#downloads" data-i18n="nav-downloads">Muat Turun Borang</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="active" data-i18n="nav-ventures">Perniagaan <i
+                                class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="property.html" data-i18n="v-property-title">Hartanah</a></li>
+                            <li><a href="shell.html" data-i18n="v-petrol-title">Stesen Minyak (Shell)</a></li>
+                            <li><a href="partnerships.html" data-i18n="v-partner-title">Projek Kerjasama</a></li>
+                            <li><a href="mineral-water.html" class="active" data-i18n="v-water-title">Air Mineral</a>
+                            </li>
+                            <li><a href="hall-rental.html" data-i18n="v-hall-title">Perkhidmatan Sewa Dewan</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact" data-i18n="nav-contact">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="lang-toggle" id="lang-toggle">
+                    <span class="lang-btn active" data-lang="en">EN</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-btn" data-lang="ms">MY</span>
+                </div>
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTERNAL HERO -->
+    <section class="internal-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/mineral_water_production.png') no-repeat center center/cover;">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h6 class="sub-title">VENTURES</h6>
+                <h1 data-i18n="v-water-title">Mineral Water Production</h1>
+                <p data-i18n="v-water-desc">Processing and distributing high-quality mineral water to distributors
+                    across the northern region.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-6" data-aos="fade-right">
+                    <div class="about-text">
+                        <h2 class="masked-header"><span class="reveal-text"><span
+                                    data-i18n="v-water-premium-title">Purely Refreshing</span></span></h2>
+                        <p style="margin-top: 20px; font-size: 1.1rem; color: var(--gray-dark);"
+                            data-i18n="v-water-premium-desc">
+                            KOPELADAR's mineral water production facility uses state-of-the-art filtration and bottling
+                            technology to ensure the highest standards of purity. We supply mineral water to various
+                            institutional partners and commercial distributors throughout Kelantan and neighboring
+                            states.
+                        </p>
+                        <div class="feature-list mt-4">
+                            <div class="feature-item"
+                                style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div class="icon"
+                                    style="width: 50px; height: 50px; background: var(--accent); color: var(--primary-dark); display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem;">
+                                    <i class="fas fa-filter"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1.2rem; margin-bottom: 5px;" data-i18n="v-water-f1-title">
+                                        Advanced Filtration</h4>
+                                    <p style="font-size: 0.9rem; color: var(--gray-dark);" data-i18n="v-water-f1-desc">
+                                        Multi-stage purification
+                                        process for ultimate purity.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item"
+                                style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div class="icon"
+                                    style="width: 50px; height: 50px; background: var(--accent); color: var(--primary-dark); display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem;">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1.2rem; margin-bottom: 5px;" data-i18n="v-water-f2-title">
+                                        Quality Lab</h4>
+                                    <p style="font-size: 0.9rem; color: var(--gray-dark);" data-i18n="v-water-f2-desc">
+                                        In-house testing for mineral
+                                        consistency and safety.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+                                <div class="icon"
+                                    style="width: 50px; height: 50px; background: var(--accent); color: var(--primary-dark); display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem;">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1.2rem; margin-bottom: 5px;" data-i18n="v-water-f3-title">Mass
+                                        Distribution</h4>
+                                    <p style="font-size: 0.9rem; color: var(--gray-dark);" data-i18n="v-water-f3-desc">
+                                        Efficient logistics network
+                                        for northern region supply.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" data-aos="fade-left">
+                    <div class="chairman-img">
+                        <img src="img/mineral_water_production.png" alt="Mineral Water Production"
+                            style="border-radius: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEGA FOOTER -->
+    <footer class="mega-footer relative-overflow">
+        <div class="footer-watermark">KOPELADAR</div>
+        <div class="container relative-z">
+            <div class="footer-top">
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <img src="img/logo.png" alt="KOPELADAR Logo">
+                        <span>KOPELADAR</span>
+                    </div>
+                    <p>Leading Cooperative in Kelantan, providing excellence in property, retail, and financial services
+                        since 1974.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="magnetic-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="magnetic-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#chairman">Leadership</a></li>
+                        <li><a href="index.html#ventures">Ventures</a></li>
+                        <li><a href="index.html#news">News</a></li>
+                        <li><a href="index.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Corporate</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#vision">Vision & Mission</a></li>
+                        <li><a href="index.html#board">Board of Directors</a></li>
+                        <li><a href="index.html#downloads">Resources</a></li>
+                        <li><a href="index.html#contact">Contact HQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p style="margin-bottom: 20px;">Subscribe to our corporate newsletter for quarterly updates.</p>
+                    <form class="modern-form"
+                        style="padding: 0; background: transparent; backdrop-filter: none; border: none;">
+                        <div class="form-group floating-label" style="margin-bottom: 0;">
+                            <input type="email" id="nl-email" placeholder=" " required style="padding-right: 50px;">
+                            <label for="nl-email" style="background: transparent;">Email Address</label>
+                            <button type="submit" class="magnetic-btn nl-btn"
+                                style="position: absolute; right: 10px; top: 10px; background: transparent; border: none; color: var(--accent); font-size: 1.2rem; cursor: pointer;"><i
+                                    class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer-text">&copy; 2026 Koperasi Perkhidmatan Pelajaran Kelantan Berhad. All Rights
+                    Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

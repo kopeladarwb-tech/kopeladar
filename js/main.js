@@ -47,6 +47,46 @@ document.addEventListener('DOMContentLoaded', () => {
             'v-partner-desc': 'Collaborating on strategic development and investment projects.',
             'v-hall-title': 'Hall Rental Services',
             'v-hall-desc': 'Providing premium event spaces for corporate and social gatherings.',
+            'v-shell-premium-title': 'Premium Energy Solutions',
+            'v-shell-premium-desc': 'KOPELADAR is proud to partner with Shell to provide high-quality fuel and exceptional retail services to the community of Kelantan. Our stations are designed to be more than just refuelling stops; they are community hubs providing convenience and reliability.',
+            'v-shell-f1-title': 'V-Power Fuels',
+            'v-shell-f1-desc': 'High-performance fuels for better engine health.',
+            'v-shell-f2-title': 'Shell Select',
+            'v-shell-f2-desc': 'Premium convenience stores with a wide range of products.',
+            'v-shell-f3-title': 'Car Care Services',
+            'v-shell-f3-desc': 'Professional car wash and maintenance services.',
+            'v-prop-premium-title': 'Visionary Real Estate',
+            'v-prop-premium-desc': 'KOPELADAR Property focuses on creating sustainable living environments and functional commercial spaces. Our team ensures every project meets high standards of quality and design, contributing to the urban development of Kelantan.',
+            'v-prop-f1-title': 'Residential Projects',
+            'v-prop-f1-desc': 'Modern gated communities and luxury housing.',
+            'v-prop-f2-title': 'Commercial Spaces',
+            'v-prop-f2-desc': 'Strategic shop lots and corporate offices.',
+            'v-prop-f3-title': 'Land Acquisition',
+            'v-prop-f3-desc': 'Developing strategically located land for future growth.',
+            'v-water-premium-title': 'Purely Refreshing',
+            'v-water-premium-desc': "KOPELADAR's mineral water production facility uses state-of-the-art filtration and bottling technology to ensure the highest standards of purity. We supply mineral water to various institutional partners and commercial distributors throughout Kelantan and neighboring states.",
+            'v-water-f1-title': 'Advanced Filtration',
+            'v-water-f1-desc': 'Multi-stage purification process for ultimate purity.',
+            'v-water-f2-title': 'Quality Lab',
+            'v-water-f2-desc': 'In-house testing for mineral consistency and safety.',
+            'v-water-f3-title': 'Mass Distribution',
+            'v-water-f3-desc': 'Efficient logistics network for northern region supply.',
+            'v-part-premium-title': 'Strategic Alliances',
+            'v-part-premium-desc': 'KOPELADAR actively seeks and develops strategic partnerships with government agencies, financial institutions, and private corporations. These collaborations allow us to leverage expertise and capital to undertake large-scale projects that benefit our members and the Kelantan economy.',
+            'v-part-f1-title': 'Institutional JVs',
+            'v-part-f1-desc': 'Joint ventures with federal and state organizations.',
+            'v-part-f2-title': 'Investment Portfolios',
+            'v-part-f2-desc': 'Managing diversified investments for sustainable returns.',
+            'v-part-f3-title': 'Infrastructure Development',
+            'v-part-f3-desc': 'Partnering on urban development and infrastructure.',
+            'v-hall-premium-title': 'Premier Event Spaces',
+            'v-hall-premium-desc': 'Our executive event spaces are designed to accommodate a variety of functions, from professional seminars and corporate meetings to social banquets. Each hall is equipped with modern AV technology and can be customized to suit your specific requirements.',
+            'v-hall-f1-title': 'Modern AV Systems',
+            'v-hall-f1-desc': 'High-quality sound and visual equipment for presentations.',
+            'v-hall-f2-title': 'Catering Services',
+            'v-hall-f2-desc': 'Integrated catering options with diverse menu selections.',
+            'v-hall-f3-title': 'Flexible Capacity',
+            'v-hall-f3-desc': 'Spaces ranging from executive boardrooms to grand halls.',
             'management-tag': 'LEADERSHIP',
             'management-title': 'Professional Board of Directors',
             'board-title': 'Board of Directors',
@@ -133,6 +173,46 @@ document.addEventListener('DOMContentLoaded', () => {
             'v-partner-desc': 'Bekerjasama dalam projek pembangunan dan pelaburan strategik.',
             'v-hall-title': 'Perkhidmatan Sewa Dewan',
             'v-hall-desc': 'Menyediakan ruang acara premium untuk perhimpunan korporat dan sosial.',
+            'v-shell-premium-title': 'Penyelesaian Tenaga Premium',
+            'v-shell-premium-desc': 'KOPELADAR berbangga bekerjasama dengan Shell untuk menyediakan bahan api berkualiti tinggi dan perkhidmatan runcit yang luar biasa kepada komuniti Kelantan. Stesen kami direka untuk menjadi lebih daripada sekadar tempat mengisi minyak; ia adalah hab komuniti yang menyediakan kemudahan dan kebolehpercayaan.',
+            'v-shell-f1-title': 'Bahan Api V-Power',
+            'v-shell-f1-desc': 'Bahan api berprestasi tinggi untuk kesihatan enjin yang lebih baik.',
+            'v-shell-f2-title': 'Shell Select',
+            'v-shell-f2-desc': 'Kedai serbaneka premium dengan pelbagai pilihan produk.',
+            'v-shell-f3-title': 'Khidmat Penjagaan Kereta',
+            'v-shell-f3-desc': 'Perkhidmatan cuci kereta dan penyelenggaraan profesional.',
+            'v-prop-premium-title': 'Hartanah Berwawasan',
+            'v-prop-premium-desc': 'Hartanah KOPELADAR fokus kepada penciptaan persekitaran hidup mampan dan ruang komersial berfungsi. Pasukan kami memastikan setiap projek memenuhi standard kualiti dan reka bentuk yang tinggi, menyumbang kepada pembangunan bandar Kelantan.',
+            'v-prop-f1-title': 'Projek Kediaman',
+            'v-prop-f1-desc': 'Komuniti berpagar moden dan perumahan mewah.',
+            'v-prop-f2-title': 'Ruang Komersial',
+            'v-prop-f2-desc': 'Lot kedai strategik dan pejabat korporat.',
+            'v-prop-f3-title': 'Pengambilalihan Tanah',
+            'v-prop-f3-desc': 'Membangunkan tanah di lokasi strategik untuk pertumbuhan masa hadapan.',
+            'v-water-premium-title': 'Kesegaran Tulen',
+            'v-water-premium-desc': 'Pusat pengeluaran air mineral KOPELADAR menggunakan teknologi penapisan dan pembotolan termaju untuk memastikan standard ketulenan tertinggi. Kami membekalkan air mineral kepada pelbagai rakan institusi dan pengedar komersial di seluruh Kelantan dan negeri jiran.',
+            'v-water-f1-title': 'Penapisan Termaju',
+            'v-water-f1-desc': 'Proses penulenan pelbagai peringkat untuk ketulenan mutlak.',
+            'v-water-f2-title': 'Makmal Kualiti',
+            'v-water-f2-desc': 'Ujian dalaman untuk konsistensi mineral dan keselamatan.',
+            'v-water-f3-title': 'Pengedaran Massa',
+            'v-water-f3-desc': 'Rangkaian logistik yang cekap untuk bekalan wilayah utara.',
+            'v-part-premium-title': 'Perikatan Strategik',
+            'v-part-premium-desc': 'KOPELADAR aktif mencari dan membangunkan perkongsian strategik dengan agensi kerajaan, institusi kewangan, dan korporat swasta. Kerjasama ini membolehkan kami memanfaatkan kepakaran dan modal untuk melaksanakan projek berskala besar yang memberi manfaat kepada ahli dan ekonomi Kelantan.',
+            'v-part-f1-title': 'JV Institusi',
+            'v-part-f1-desc': 'Usahasama dengan organisasi persekutuan dan negeri.',
+            'v-part-f2-title': 'Portfolio Pelaburan',
+            'v-part-f2-desc': 'Menguruskan pelaburan yang pelbagai untuk pulangan mampan.',
+            'v-part-f3-title': 'Pembangunan Infrastruktur',
+            'v-part-f3-desc': 'Bekerjasama dalam pembangunan bandar dan infrastruktur.',
+            'v-hall-premium-title': 'Ruang Acara Utama',
+            'v-hall-premium-desc': 'Ruang acara eksekutif kami direka untuk menampung pelbagai fungsi, daripada seminar profesional dan mesyuarat korporat sehingga jamuan sosial. Setiap dewan dilengkapi dengan teknologi AV moden dan boleh disesuaikan mengikut keperluan khusus anda.',
+            'v-hall-f1-title': 'Sistem AV Moden',
+            'v-hall-f1-desc': 'Peralatan bunyi dan visual berkualiti tinggi untuk pembentangan.',
+            'v-hall-f2-title': 'Perkhidmatan Katering',
+            'v-hall-f2-desc': 'Pilihan katering bersepadu dengan pelbagai pilihan menu.',
+            'v-hall-f3-title': 'Kapasiti Fleksibel',
+            'v-hall-f3-desc': 'Ruang merangkumi bilik mesyuarat eksekutif sehingga dewan besar.',
             'management-tag': 'KEPIMPINAN',
             'management-title': 'Barisan Pengurusan Profesional',
             'board-title': 'Lembaga Pengarah',
@@ -166,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'email-ph': 'E-mel Anda',
             'msg-ph': 'Mesej Anda',
             'btn-send': 'Hantar Mesej',
-            'mission-desc': 'Menyampaikan perkhidmatan kewangan yang profesional dan telus, mengembangkan portfolio perniagaan, dan memupuk inovasi serta integriti dalam setiap usaha.',
+            'mission-desc': 'Menyaiperkhidmatan kewangan yang profesional dan telus, mengembangkan portfolio perniagaan, dan memupuk inovasi serta integriti dalam setiap usaha.',
             'stat-years': 'Tahun Kecemerlangan',
             'stat-members': 'Ahli Aktif',
             'stat-assets': 'Aset RM Juta',
@@ -178,20 +258,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // LANGUAGE SWITCHER LOGIC
     const langBtns = document.querySelectorAll('.lang-btn');
-    let currentLang = 'en';
+    let currentLang = localStorage.getItem('language') || 'en';
 
     function setLanguage(lang) {
         currentLang = lang;
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) {
+            if (translations[lang] && translations[lang][key]) {
                 el.innerText = translations[lang][key];
             }
         });
 
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');
-            if (translations[lang][key]) {
+            if (translations[lang] && translations[lang][key]) {
                 el.placeholder = translations[lang][key];
             }
         });
@@ -201,7 +281,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.documentElement.lang = lang;
+        localStorage.setItem('language', lang);
     }
+
+    // Initialize Language on Load
+    setLanguage(currentLang);
 
     langBtns.forEach(btn => {
         btn.addEventListener('click', () => {

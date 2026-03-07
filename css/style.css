@@ -180,13 +180,13 @@ h4,
     color: var(--primary);
 }
 
-#navbar ul {
+#navbar>ul {
     display: flex;
     list-style: none;
     gap: 40px;
 }
 
-#navbar ul li a {
+#navbar>ul>li>a {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
@@ -197,16 +197,16 @@ h4,
     letter-spacing: 0.3px;
 }
 
-#main-header.scrolled #navbar ul li a {
+#main-header.scrolled #navbar>ul>li>a {
     color: var(--slate);
 }
 
-#navbar ul li a:hover,
-#navbar ul li a.active {
+#navbar>ul>li>a:hover,
+#navbar>ul>li>a.active {
     color: var(--accent);
 }
 
-#navbar ul li a::after {
+#navbar>ul>li>a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -217,8 +217,8 @@ h4,
     transition: var(--transition);
 }
 
-#navbar ul li a:hover::after,
-#navbar ul li a.active::after {
+#navbar>ul>li>a:hover::after,
+#navbar>ul>li>a.active::after {
     width: 100%;
 }
 
@@ -228,13 +228,15 @@ h4,
 }
 
 .dropdown-menu {
+    display: block !important;
     position: absolute;
     top: 100%;
     left: 0;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    min-width: 280px;
+    min-width: 320px;
+    width: max-content;
     box-shadow: var(--shadow-lg);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -243,8 +245,8 @@ h4,
     transform: translateY(20px);
     transition: var(--transition);
     list-style: none;
-    padding: 15px 0;
-    margin-top: 15px;
+    padding: 10px 0;
+    margin-top: 10px;
     z-index: 1000;
 }
 
@@ -267,6 +269,7 @@ h4,
 .dropdown-menu li {
     padding: 0;
     margin: 0 !important;
+    width: 100%;
 }
 
 .dropdown-menu li a {
@@ -2360,4 +2363,71 @@ body.dark-mode .mega-footer {
     object-fit: cover;
     transform: translateY(-10%);
     will-change: transform;
+}
+
+/* INTERNAL SUB-PAGES */
+.internal-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.internal-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(2, 44, 34, 0.8) 0%, rgba(2, 44, 34, 0.4) 100%);
+    z-index: 1;
+}
+
+.internal-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.internal-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.internal-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.feature-list {
+    margin-top: 40px;
+}
+
+.feature-item h4 {
+    color: var(--primary);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+.feature-item i {
+    transition: var(--transition);
+}
+
+.feature-item:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+@media (max-width: 768px) {
+    .internal-hero {
+        height: 50vh;
+    }
+
+    .internal-hero h1 {
+        font-size: 2.5rem;
+    }
+
 }
