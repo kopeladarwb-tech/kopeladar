@@ -413,9 +413,180 @@ function initNavbarFeatures() {
     }
 }
 
+// 1. YOUR CONFIGURATION
+const NOTION_TOKEN = "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";
+const DATABASE_ID = "32132d571f31805b97f5c8f3a1b3e44f";
+
+// 2. PROXY CONFIG (Crucial for GitHub Pages)
+const PROXY_URL = "https://corsproxy.io/?";
+const NOTION_API_URL = `https://api.notion.com/v1/databases/${DATABASE_ID}/query`;
+
+async function fetchActivities() {
+    try {
+        console.log("Attempting to fetch data...");
+
+        const response = await fetch(PROXY_URL + encodeURIComponent(NOTION_API_URL), {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${NOTION_TOKEN}`,
+                "Notion-Version": "2022-06-28",
+                "Content-Type": "application/json",
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            body: JSON.stringify({})
+        });
+
+        if (!response.ok) {
+            const errorBody = await response.text();
+            throw new Error(`Notion API Error: ${response.status} - ${errorBody}`);
+        }
+
+        const data = await response.json();
+        console.log("Data received from Notion:", data);
+        renderCards(data.results);
+
+    } catch (error) {
+        console.error("DEBUG ERROR:", error);
+        document.getElementById('activity-container').innerHTML = `
+            <div style="color: red; padding: 20px; border: 1px solid red;">
+                <p><strong>Error Loading Activities</strong></p>
+                <small>${error.message}</small>
+            </div>`;
+    }
+}
+
+function renderCards(events) {
+    const container = document.getElementById('activity-container');
+    container.innerHTML = ""; // Clear loading message
+
+    events.forEach(event => {
+        // Data Extraction
+        const titleProp = event.properties.Name || event.properties.Heading || event.properties.title;
+        const title = titleProp?.title[0]?.plain_text || "Untitled Event";
+        const date = event.properties["Event Date"]?.date?.start || "TBA";
+        const desc = event.properties.Description?.rich_text[0]?.plain_text || "";
+        const imgObj = event.properties.Thumbnail?.files[0];
+        const img = imgObj?.file?.url || imgObj?.external?.url || "https://via.placeholder.com/400x250";
+
+        // Generate HTML matching your CSS
+        container.innerHTML += `
+            <div class="swiper-slide">
+                <article class="news-card">
+                    <div class="news-img">
+                        <img src="${img}" alt="${title}">
+                        <div class="news-date">${date}</div>
+                    </div>
+                    <div class="news-content">
+                        <h4>${title}</h4>
+                        <p>${desc}</p>
+                        <a href="${event.url}" target="_blank" class="read-more">
+                            View Details <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        `;
+    });
+
+    // Initialize Swiper after cards are loaded
+    new Swiper('.news-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+}
+
+// Start the fetch
+fetchActivities();
+
+
+//main organizational chart
+function buildOrgChart() {
+    const chartPlaceholder = document.getElementById('org-chart-placeholder');
+    if (!chartPlaceholder) return; // Stop if we aren't on the org chart page
+
+    // Change this path if your JSON is in a different folder!
+    fetch('/json/data.json')
+        .then(response => response.json())
+        .then(data => {
+
+            // 1. Sort people by their secret 'role' tag
+            const penaung = data.find(person => person.role.toLowerCase() === 'penaung');
+            const penasihat = data.find(person => person.role.toLowerCase() === 'penasihat');
+            const boardMembers = data.filter(person => person.role.toLowerCase() === 'board');
+
+            // 2. Loop through all board members and build their HTML cards
+            let boardHtml = '';
+            boardMembers.forEach(member => {
+                boardHtml += `
+                    <li>
+                        <a href="/html/profile.html?id=${member.id}">
+                            <div class="avatar-container">
+                                <img src="${member.image}" alt="${member.title}" class="avatar-image">
+                            </div>
+                            <span class="name">${member.name}</span>
+                            <span class="title">${member.title}</span>
+                        </a>
+                    </li>
+                `;
+            });
+
+            // 3. Assemble the entire chart
+            const fullChartHtml = `
+                <div class="org-tree">
+                    <ul>
+                        <li>
+                            <a href="/html/profile.html?id=${penaung.id}">
+                                <div class="avatar-container">
+                                    <img src="${penaung.image}" alt="${penaung.title}" class="avatar-image">
+                                </div>
+                                <span class="name">${penaung.name}</span>
+                                <span class="title">${penaung.title}</span>
+                            </a>
+
+                            <ul class="trunk-container">
+                                
+                                <li class="staff-node">
+                                    <a href="/html/profile.html?id=${penasihat.id}">
+                                        <div class="avatar-container">
+                                            <img src="${penasihat.image}" alt="${penasihat.title}" class="avatar-image">
+                                        </div>
+                                        <span class="name">${penasihat.name}</span>
+                                        <span class="title">${penasihat.title}</span>
+                                    </a>
+                                </li>
+
+                                <li class="regular-branches-wrapper">
+                                    <ul>
+                                        ${boardHtml}
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            `;
+
+            // 4. Inject into the page
+            chartPlaceholder.innerHTML = fullChartHtml;
+        })
+        .catch(error => {
+            console.error('Error loading org chart:', error);
+            chartPlaceholder.innerHTML = '<p style="color:#d32f2f; text-align:center;">Failed to load data.json</p>';
+        });
+}
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+    buildOrgChart();
 
     // Initialize Navbar if it exists in static HTML
     if (typeof initNavbarFeatures === 'function') {

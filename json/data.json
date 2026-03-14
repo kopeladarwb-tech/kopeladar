@@ -2,64 +2,61 @@
     {
         "id": 1,
         "name": "YB. Dato' Menteri Besar Kelantan",
+        "role": "penaung",
         "title": "Penaung",
-        "image": "../img/opah.png",
-        "bio": "Serving as the patron and main advisor for the organization.",
+        "image": "../img/abah.jpeg",
+        "bio": "Serving as the patron and main advisor.",
         "phone": "+60 11-11111",
         "email": "penaung@example.com"
     },
     {
         "id": 2,
         "name": "YABrs. En. Mohd Arpi bin Ariffin",
+        "role": "penasihat",
         "title": "Penasihat",
-        "image": "../img/opah.png",
-        "bio": "Providing strategic advice and guidance to the management board.",
+        "image": "../img/abah.jpeg",
+        "bio": "Providing strategic advice.",
         "phone": "+60 11-11111",
         "email": "penasihat@example.com"
     },
     {
         "id": 3,
-        "name": "YABrs. En. Mohd Arpi bin Ariffin",
-        "title": "Penasihat",
-        "image": "../img/opah.png",
-        "bio": "Providing strategic advice and guidance to the management board.",
+        "name": "Dr. Hj. Nazmi bin Ghazali Azmi",
+        "role": "board",
+        "title": "ALK Pengurusan",
+        "image": "../img/abah.jpeg",
+        "bio": "Managing cooperative assets.",
         "phone": "+60 11-11111",
-        "email": "penasihat@example.com"
+        "email": "alk@example.com"
     },
     {
         "id": 4,
-        "name": "YABrs. En. Mohd Arpi bin Ariffin",
-        "title": "Penasihat",
-        "image": "../img/opah.png",
-        "bio": "Providing strategic advice and guidance to the management board.",
+        "name": "Hj. Wan Azmi Bin Wan Yusoff",
+        "role": "board",
+        "title": "Pengerusi",
+        "image": "../img/abah.jpeg",
+        "bio": "Chairing the board of directors.",
         "phone": "+60 11-11111",
-        "email": "penasihat@example.com"
+        "email": "pengerusi@example.com"
     },
     {
         "id": 5,
-        "name": "YABrs. En. Mohd Arpi bin Ariffin",
-        "title": "Penasihat",
-        "image": "../img/opah.png",
-        "bio": "Providing strategic advice and guidance to the management board.",
+        "name": "En. Muhammad Bin Mohd Nor",
+        "role": "board",
+        "title": "Setiausaha",
+        "image": "../img/abah.jpeg",
+        "bio": "Overseeing operations.",
         "phone": "+60 11-11111",
-        "email": "penasihat@example.com"
+        "email": "setiausaha@example.com"
     },
     {
         "id": 6,
-        "name": "YABrs. En. Mohd Arpi bin Ariffin",
-        "title": "Penasihat",
-        "image": "../img/opah.png",
-        "bio": "Providing strategic advice and guidance to the management board.",
+        "name": "Hj. Mohamad Bakhari Bin Hamat",
+        "role": "board",
+        "title": "Bendahari",
+        "image": "../img/abah.jpeg",
+        "bio": "Managing financial portfolios.",
         "phone": "+60 11-11111",
-        "email": "penasihat@example.com"
-    },
-    {
-        "id": 7,
-        "name": "YABrs. En. Mohd Arpi bin Ariffin",
-        "title": "Penasihat",
-        "image": "../img/opah.png",
-        "bio": "Providing strategic advice and guidance to the management board.",
-        "phone": "+60 11-11111",
-        "email": "penasihat@example.com"
+        "email": "bendahari@example.com"
     }
 ]

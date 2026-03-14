@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body class="loading">
@@ -544,78 +547,10 @@
             <div class="section-header text-center" data-aos="fade-up">
                 <h6 class="sub-title" data-i18n="nav-organization">Struktur Organisasi</h6>
                 <h2 data-i18n="org-title">Organizational Chart</h2>
-            </div>
-            <div class="tree-wrapper">
-                <div class="org-tree">
-                    <ul>
-                        <li>
-                            <a href="html/profile.html?id=1">
-                                <div class="avatar-container">
-                                    <img src="img/opah.png" alt="Penaung" class="avatar-image">
-                                </div>
-                                <span class="name">Penaung</span>
-                                <span class="title">YB. Dato' Menteri Besar Kelantan</span>
-                            </a>
-
-                            <ul class="trunk-container">
-
-                                <li class="staff-node">
-                                    <a href="html/profile.html?id=2">
-                                        <div class="avatar-container">
-                                            <img src="img/opah.png" alt="Penasihat" class="avatar-image">
-                                        </div>
-                                        <span class="name">Penasihat</span>
-                                        <span class="title">YABrs. En. Mohd Arpi bin Ariffin</span>
-                                    </a>
-                                </li>
-
-                                <li class="regular-branches-wrapper">
-                                    <ul>
-                                        <li>
-                                            <a href="html/profile.html?id=3">
-                                                <div class="avatar-container">
-                                                    <img src="img/opah.png" alt="ALK Pengurusan" class="avatar-image">
-                                                </div>
-                                                <span class="name">ALK Pengurusan</span>
-                                                <span class="title">Dr. Hj. Nazmi bin Ghazali Azmi</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="html/profile.html?id=4">
-                                                <div class="avatar-container">
-                                                    <img src="img/opah.png" alt="Pengerusi" class="avatar-image">
-                                                </div>
-                                                <span class="name">Pengerusi</span>
-                                                <span class="title">Hj. Wan Azmi Bin Wan Yusoff</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="html/profile.html?id=5">
-                                                <div class="avatar-container">
-                                                    <img src="img/opah.png" alt="Setiausaha" class="avatar-image">
-                                                </div>
-                                                <span class="name">Setiausaha</span>
-                                                <span class="title">En. Muhammad Bin Mohd Nor</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="html/profile.html?id=6">
-                                                <div class="avatar-container">
-                                                    <img src="img/opah.png" alt="Bendahari" class="avatar-image">
-                                                </div>
-                                                <span class="name">Bendahari</span>
-                                                <span class="title">Hj. Mohamad Bakhari Bin Hamat</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="tree-wrapper" id="org-chart-placeholder">
+                    <p style="text-align: center; color: #757575;">Loading Organizational Chart...</p>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- CUSTOMER SERVICE (Khidmat Pelanggan) -->
@@ -657,58 +592,17 @@
     <section id="news" class="news section-padding bg-light">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
-                <h6 class="sub-title" data-i18n="news-tag">LATEST UPDATES</h6>
-                <h2 data-i18n="news-title">Corporate News & Announcements</h2>
+                <h6 class="sub-title">LATEST UPDATES</h6>
+                <h2>Corporate News & Announcements</h2>
             </div>
 
-            <div class="swiper news-swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-img">
-                                <img src="https://via.placeholder.com/400x250" alt="AGM 2026" loading="lazy">
-                                <div class="news-date">15 Mar 2026</div>
-                            </div>
-                            <div class="news-content">
-                                <h4>Annual General Meeting 2026</h4>
-                                <p>Notice for the upcoming 52nd Annual General Meeting for all registered members.</p>
-                                <a href="#" class="read-more">Read Full Notice <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-img">
-                                <img src="https://via.placeholder.com/400x250" alt="CSR Program" loading="lazy">
-                                <div class="news-date">02 Mar 2026</div>
-                            </div>
-                            <div class="news-content">
-                                <h4>Ramadan CSR Initiative</h4>
-                                <p>KOPELADAR extends support to 500 families across Kelantan in our annual giving back
-                                    program.</p>
-                                <a href="#" class="read-more">Read Full Notice <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-img">
-                                <img src="https://via.placeholder.com/400x250" alt="New Property" loading="lazy">
-                                <div class="news-date">20 Feb 2026</div>
-                            </div>
-                            <div class="news-content">
-                                <h4>Launch of Taman Kopeladar Phase 2</h4>
-                                <p>We are proud to announce the official launch of our newest residential development in
-                                    Pasir Mas.</p>
-                                <a href="#" class="read-more">Read Full Notice <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="swiper news-swiper" data-aos="fade-up" data-aos-delay="200">
+                <div id="activity-container" class="swiper-wrapper">
                 </div>
-                <!-- Pagination & Navigation -->
-                <div class="swiper-pagination"></div>
+
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
