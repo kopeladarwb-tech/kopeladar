@@ -422,8 +422,79 @@ document.addEventListener('DOMContentLoaded', () => {
         initNavbarFeatures();
     }
 
+    // --- DYNAMIC DATA FETCHING FROM ADMIN PANEL ---
+    const fetchDynamicData = async () => {
+        // Fetch Workers
+        try {
+            const apiBase = window.location.pathname.includes('/html/') ? '../api' : 'api';
+            const wRes = await fetch(`${apiBase}/get_workers.php`);
+            const wData = await wRes.json();
 
+            if (wData.status === 'success') {
+                const boardGrid = document.querySelector('#board .management-grid');
+                const mgmtGrid = document.querySelector('#management-team .management-grid');
 
+                let boardHtml = '';
+                let mgmtHtml = '';
+
+                wData.data.forEach((w, index) => {
+                    const delay = (index % 3) * 100; // stagger animation
+                    const imgSrc = w.image_path ? (window.location.pathname.includes('/html/') ? '../' + w.image_path : w.image_path) : 'https://via.placeholder.com/600x800';
+                    const html = `
+                        <div class="member-card tilt-card" data-tilt data-aos="fade-up" data-aos-delay="${delay}">
+                            <div class="member-img">
+                                <img src="${imgSrc}" alt="${w.name}">
+                            </div>
+                            <div class="member-info">
+                                <h4>${w.name}</h4>
+                                <p>${w.position}</p>
+                            </div>
+                        </div>
+                    `;
+
+                    if (w.category === 'board') boardHtml += html;
+                    if (w.category === 'management') mgmtHtml += html;
+                });
+
+                if (boardGrid && boardHtml) boardGrid.innerHTML = boardHtml;
+                if (mgmtGrid && mgmtHtml) mgmtGrid.innerHTML = mgmtHtml;
+            }
+        } catch (e) {
+            console.log('Workers dynamic fetch failed, showing static data.');
+        }
+
+        // Fetch Reports
+        try {
+            const apiBase = window.location.pathname.includes('/html/') ? '../api' : 'api';
+            const rRes = await fetch(`${apiBase}/get_reports.php`);
+            const rData = await rRes.json();
+
+            if (rData.status === 'success') {
+                const downloadsGrid = document.querySelector('#downloads .downloads-grid');
+                let reportsHtml = '';
+
+                rData.data.forEach((r, index) => {
+                    const delay = (index % 2) * 100;
+                    const fileSrc = window.location.pathname.includes('/html/') ? '../' + r.file_path : r.file_path;
+                    reportsHtml += `
+                        <div class="download-item" data-aos="fade-up" data-aos-delay="${delay}">
+                            <i class="fas fa-file-pdf"></i>
+                            <h4>${r.title}</h4>
+                            <p>Financial Year ${r.year}</p>
+                            <a href="${fileSrc}" target="_blank" class="btn btn-primary" style="margin-top: 15px;" data-i18n="btn-download">Download</a>
+                        </div>
+                    `;
+                });
+
+                if (downloadsGrid && reportsHtml) (downloadsGrid.innerHTML = reportsHtml);
+            }
+        } catch (e) {
+            console.log('Reports dynamic fetch failed, showing static data.');
+        }
+    };
+
+    // Call the data fetch
+    fetchDynamicData();
 
 
     // SCROLL ANIMATIONS (AOS)
