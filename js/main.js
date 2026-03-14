@@ -417,7 +417,7 @@ function initNavbarFeatures() {
 const NOTION_TOKEN = "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";
 const DATABASE_ID = "32132d571f31805b97f5c8f3a1b3e44f";
 
-// 2. PROXY CONFIG (Updated for AllOrigins to fix GitHub CORS issues)
+// 2. PROXY CONFIG (Using AllOrigins to fix the CORS error in your screenshot)
 const PROXY_URL = "https://api.allorigins.win/get?url=";
 const NOTION_API_URL = `https://api.notion.com/v1/databases/${DATABASE_ID}/query`;
 
@@ -425,11 +425,11 @@ async function fetchActivities() {
     try {
         console.log("Attempting to fetch data via AllOrigins...");
 
-        // AllOrigins works best by wrapping the request in a GET URL
+        // We use encodeURIComponent to safely wrap the Notion URL inside the Proxy URL
         const fetchUrl = `${PROXY_URL}${encodeURIComponent(NOTION_API_URL)}`;
 
         const response = await fetch(fetchUrl, {
-            method: "POST", // Notion requires POST to query
+            method: "POST", // Notion still requires POST
             headers: {
                 "Authorization": `Bearer ${NOTION_TOKEN}`,
                 "Notion-Version": "2022-06-28",
@@ -438,33 +438,30 @@ async function fetchActivities() {
             body: JSON.stringify({})
         });
 
-        if (!response.ok) {
-            throw new Error(`Proxy/Notion Error: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
 
         const wrapper = await response.json();
 
-        // AllOrigins returns the Notion data as a string inside 'contents'
-        // We need to parse that string back into a real JavaScript object
+        // AllOrigins wraps the Notion response in a string called 'contents'
+        // We MUST parse this string to get our cards
         const data = JSON.parse(wrapper.contents);
 
         if (data.object === "error") {
-            throw new Error(data.message);
+            throw new Error(`Notion Error: ${data.message}`);
         }
 
-        console.log("Data received from Notion:", data);
+        console.log("Success! Data received:", data);
         renderCards(data.results);
 
     } catch (error) {
         console.error("DEBUG ERROR:", error);
         document.getElementById('activity-container').innerHTML = `
-            <div style="color: red; padding: 20px; border: 1px solid red; background: #fff;">
-                <p><strong>Error Loading Activities</strong></p>
+            <div style="color: #721c24; background: #f8d7da; padding: 20px; border-radius: 8px;">
+                <p><strong>Failed to sync with Notion</strong></p>
                 <small>${error.message}</small>
             </div>`;
     }
 }
-
 function renderCards(events) {
     const container = document.getElementById('activity-container');
     container.innerHTML = ""; // Clear loading message
@@ -502,6 +499,7 @@ function renderCards(events) {
     new Swiper('.news-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
+        loop: false,
         pagination: { el: '.swiper-pagination', clickable: true },
         navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
         breakpoints: {
@@ -521,7 +519,7 @@ function buildOrgChart() {
     if (!chartPlaceholder) return; // Stop if we aren't on the org chart page
 
     // Change this path if your JSON is in a different folder!
-    fetch('/json/data.json')
+    fetch('./json/data.json')
         .then(response => response.json())
         .then(data => {
 
