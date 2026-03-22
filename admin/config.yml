@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Asraf-wolf/kopeladar
+  repo: dzu111/kopeladar
   branch: main
   base_url: https://kopeladar-auth.dzulamri070.workers.dev # THE WORKER URL
   auth_endpoint: auth # This matches the /auth in our Worker code
@@ -14,13 +14,26 @@ collections:
     folder: "data/events"
     create: true
     format: "json"
+    extension: "json"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "ID", name: "id", widget: "number" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Event Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body Content", name: "body", widget: "markdown" }
-      - { label: "Body (Malay)", name: "body_ms", widget: "markdown" }
-      - { label: "Body (English)", name: "body_en", widget: "markdown" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Event Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false}
+      
+      # --- NEW FIELDS FOR THE TEMPLATE ---
+      - {label: "Event Time", name: "time", widget: "string", hint: "e.g., 09:00 AM - 02:00 PM", required: false}
+      - {label: "Location", name: "location", widget: "string", hint: "e.g., Grand Riverview Hotel, Kota Bharu", required: false}
+      
+      - {label: "Featured Image (Hero & Thumbnail)", name: "image", widget: "image", required: false}
+      - {label: "Short Description", name: "description", widget: "text", hint: "Shows on the homepage cards"}
+      
+      # --- THE DYNAMIC GALLERY ---
+      - label: "Event Gallery"
+        name: "gallery"
+        widget: "list"
+        required: false
+        collapsed: true
+        hint: "Add as many images as you want for the bottom slider."
+        field: {label: "Photo", name: "photo", widget: "image"}
+        
+      - {label: "Body Content", name: "body", widget: "markdown"}

@@ -37,7 +37,7 @@
         .event-info-icon {
             width: 45px;
             height: 45px;
-            background: var(--accent, #f39c12); 
+            background: var(--accent, #f39c12); /* Fallback to KOPELADAR yellow */
             color: var(--primary-dark, #022c22);
             display: flex;
             align-items: center;
@@ -59,12 +59,12 @@
 
         /* Swiper Slider Styles */
         .media-slider-section {
-            background-color: #f8f9fa; 
+            background-color: #f8f9fa; /* Light grey background to separate from text */
         }
         .swiper-slide {
             border-radius: 15px;
             overflow: hidden;
-            aspect-ratio: 16/9; 
+            aspect-ratio: 16/9; /* Keeps images and videos nicely proportioned */
             background: #000;
         }
         .swiper-slide img, .swiper-slide video {
@@ -82,7 +82,6 @@
 </head>
 
 <body class="loading">
-
     <div id="reading-progress" style="position: fixed; top: 0; left: 0; height: 4px; background: var(--accent, #f39c12); width: 0%; z-index: 9999; transition: width 0.1s ease-out;"></div>
 
     <div id="scroll-progress"></div>
@@ -121,17 +120,16 @@
                         <p>The event will feature keynote speeches from our Chairman and guest of honor. Members will have the opportunity to vote on key resolutions and partake in a networking luncheon.</p>
                         <p>We look forward to sharing our vision for the next decade, focusing on sustainable growth in our retail, property, and agricultural sectors.</p>
                     </div>
-
                     <div class="share-bar mt-5 pt-4" style="border-top: 1px solid #eee;">
-                        <h5 style="font-size: 1rem; margin-bottom: 15px; color: var(--primary-dark);">Share this event</h5>
-                        <div style="display: flex; gap: 10px;">
-                            <a href="#" onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(window.location.href)); return false;" style="width: 40px; height: 40px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
-                            
-                            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;" style="width: 40px; height: 40px; border-radius: 50%; background: #1877F2; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem;"><i class="fab fa-facebook-f"></i></a>
-                            
-                            <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" style="width: 40px; height: 40px; border-radius: 50%; background: #f8f9fa; color: var(--primary-dark); display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; cursor: pointer; font-size: 1.1rem; transition: 0.3s;"><i class="fas fa-link"></i></button>
-                        </div>
-                    </div>
+    <h5 style="font-size: 1rem; margin-bottom: 15px; color: var(--primary-dark);">Share this event</h5>
+    <div style="display: flex; gap: 10px;">
+        <a href="#" onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(window.location.href)); return false;" style="width: 40px; height: 40px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
+        
+        <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;" style="width: 40px; height: 40px; border-radius: 50%; background: #1877F2; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem;"><i class="fab fa-facebook-f"></i></a>
+        
+        <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" style="width: 40px; height: 40px; border-radius: 50%; background: #f8f9fa; color: var(--primary-dark); display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; cursor: pointer; font-size: 1.1rem; transition: 0.3s;"><i class="fas fa-link"></i></button>
+    </div>
+</div>
                 </div>
 
                 <div class="col-4" data-aos="fade-left">
@@ -181,8 +179,16 @@
                     <div class="swiper-slide">
                         <img src="img/shell_station_premium.png" alt="Gallery Image 1">
                     </div>
+                    
                     <div class="swiper-slide">
                         <img src="https://placehold.co/1200x675/022c22/ffffff?text=Event+Photo+2" alt="Gallery Image 2">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <video controls poster="https://placehold.co/1200x675/333/fff?text=Video+Thumbnail">
+                            <source src="your-video-file.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
 
                 </div>
@@ -199,11 +205,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.1/marked.min.js"></script>
     <script src="main.js"></script>
-
-    <script>
-        // Reading Progress Bar Logic
+    <script>// Reading Progress Bar Logic
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -211,16 +214,21 @@
             const progressBar = document.getElementById('reading-progress');
             if (progressBar) progressBar.style.width = scrolled + '%';
         });
+    </script>
 
-        // Fetch Partials
-        const fetchPartials = async () => {
-            const nav = await fetch('navbar.html').then(r => r.text());
-            const foot = await fetch('footer.html').then(r => r.text());
-            document.getElementById('navbar-placeholder').innerHTML = nav;
-            document.getElementById('footer-placeholder').innerHTML = foot;
-            if (typeof initNavbarFeatures === 'function') initNavbarFeatures();
-        };
-        fetchPartials();
+    <script>
+        // Fetch Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        // Fetch Navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                if (typeof initNavbarFeatures === 'function') initNavbarFeatures();
+            });
 
         // Initialize Swiper Slider
         document.addEventListener('DOMContentLoaded', () => {
@@ -237,6 +245,7 @@
                     clickable: true,
                 },
                 breakpoints: {
+                    // When window is >= 768px, show 1.5 slides so they peek out the sides
                     768: {
                         slidesPerView: 1.2,
                         centeredSlides: true,
@@ -244,11 +253,6 @@
                 }
             });
         });
-
-        // ==========================================
-        // DECAP CMS DATA INJECTION (Placeholder)
-        // ==========================================
-        // We will write the script to fetch the JSON and replace the dummy data here next!
     </script>
 </body>
 </html>
