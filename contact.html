@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <meta name="description"
+        content="KOPELADAR's Property Development - Developing premium residential and commercial projects across Kelantan.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Animation Libs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <body class="loading">
+
+    <!-- SCROLL PROGRESS & CUSTOM CURSOR -->
+    <div id="scroll-progress"></div>
+    <div id="custom-cursor" class="custom-cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="svg-loader-wrap">
+            <svg class="svg-logo-draw" viewBox="0 0 400 100">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">KOPELADAR</text>
+            </svg>
+        </div>
+    </div>
+
+    <div id="navbar-placeholder"></div>
+
+    <!-- INTERNAL HERO -->
+    <section class="internal-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/property.png') no-repeat center center/cover;">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h6 class="sub-title">VENTURES</h6>
+                <h1 data-i18n="v-property-title">Property Development</h1>
+                <p data-i18n="v-property-desc">Developing premium residential and commercial projects across Kelantan
+                    with modern architectural excellence.</p>
+            </div>
+        </div>
+    </section>
+    
+<!-- CONTACT SECTION -->
+    <section id="contact" class="contact section-padding bg-light">
+        <div class="container" data-aos="fade-up">
+            <div class="contact-box">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="contact-info">
+                            <h2 data-i18n="contact-title">Contact Our HQ</h2>
+                            <p data-i18n="contact-desc">For official inquiries, partnership proposals, or membership
+                                services, please reach out to our corporate office.</p>
+
+                            <ul class="info-list">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <h5 data-i18n="location">Location</h5>
+                                        <p data-i18n="address">No 4779 Jalan Kampung Dusun, 15200, Kota Bharu, Kelantan
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-alt"></i>
+                                    <div>
+                                        <h5 data-i18n="phone">Direct Line</h5>
+                                        <p>+60 9-123 4567</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <h5 data-i18n="email">Corporate Email</h5>
+                                        <p>info@kopeladar.com.my</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="contact-form-wrapper">
+                            <form id="contactForm" class="modern-form">
+                                <div class="form-group floating-label">
+                                    <input type="text" id="name" placeholder=" " required aria-label="Your Name">
+                                    <label for="name" data-i18n-placeholder="name-ph">Your Full Name</label>
+                                    <i class="fas fa-check-circle validation-icon"></i>
+                                </div>
+                                <div class="form-group floating-label">
+                                    <input type="email" id="email" placeholder=" " required
+                                        aria-label="Official Email Address">
+                                    <label for="email" data-i18n-placeholder="email-ph">Official Email Address</label>
+                                    <i class="fas fa-check-circle validation-icon"></i>
+                                </div>
+                                <div class="form-group floating-label">
+                                    <textarea id="message" rows="6" placeholder=" " required
+                                        aria-label="Your Inquiry"></textarea>
+                                    <label for="message" data-i18n-placeholder="msg-ph">Enter your inquiry...</label>
+                                    <i class="fas fa-check-circle validation-icon"></i>
+                                </div>
+                                <button type="submit" class="btn btn-primary magnetic-btn" data-i18n="btn-send"
+                                    data-aos="zoom-in" data-aos-delay="300">
+                                    <span>Submit Inquiry</span>
+                                </button>
+                            </form>
+                            <div class="form-success-state" id="formSuccess">
+                                <div class="success-checkmark">
+                                    <div class="check-icon"></div>
+                                </div>
+                                <h3 data-i18n="success-title">Thank You!</h3>
+                                <p data-i18n="success-desc">Your message has been received securely.</p>
+                                <button class="btn btn-outline" id="resetFormBtn" style="margin-top: 20px;">Send
+                                    Another</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visit-section section-padding bg-light">
+    <div class="container">
+        <div class="row align-center">
+            <div class="col-7" data-aos="fade-right">
+                <div class="visit-content">
+                    <h2 class="section-title">Visit our office or warehouse!</h2>
+                    <p class="mt-4 mb-5">Our headquarters is located in the heart of Kota Bharu, serving as the central hub for KOPELADAR's diverse corporate and community ventures.</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline-dark">GET DIRECTIONS</a>
+                </div>
+            </div>
+            <div class="col-5" data-aos="fade-left">
+                <div class="hours-card">
+                    <div class="hours-badge">HOURS</div>
+                    <div class="hours-row">
+                        <h5>Monday – Friday</h5>
+                        <span>9am – 5pm</span>
+                    </div>
+                    <div class="hours-row">
+                        <h5>Saturdays</h5>
+                        <span>11am – 5pm</span>
+                    </div>
+                    <div class="hours-row">
+                        <h5>Sundays</h5>
+                        <span>9am – 3pm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map-section section-padding-small">
+    <div class="container">
+        <div class="map-card-frame" data-aos="zoom-in">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.123!2d102.24!3d6.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMDcnMTIuMCJOIDEwMsKwMTQnMjQuMCJF!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            
+            <div class="map-tag">
+                <i class="fas fa-location-arrow"></i>
+                <span>Jalan Kampung Dusun, Kota Bharu</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="faq-section section-padding">
+    <div class="container">
+        <div class="section-header mb-5" data-aos="fade-up">
+            <h6 class="sub-title" data-i18n="faq-tag">FAQ</h6>
+            <h2 data-i18n="faq-title">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-6" data-aos="fade-right">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-i18n="faq-q1">HOW DO I BECOME A MEMBER?</span>
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-a1">You can download the Membership Form from our resources section and submit it to our HQ office in Kota Bharu.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-i18n="faq-q2">SHARE CAPITAL WITHDRAWAL PROCESS</span>
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-a2">Members must submit the official Withdrawal Form along with a copy of their Identification Card to the management office.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6" data-aos="fade-left">
+                <div class="ask-form-wrap">
+                    <h3 data-i18n="faq-form-title">Ask a different question</h3>
+                    <form class="line-form mt-4">
+                        <div class="line-input-group">
+                            <label data-i18n="name-ph">Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="line-input-group">
+                            <label data-i18n="email-ph">Email Address</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="line-input-group">
+                            <label data-i18n="msg-ph">Message</label>
+                            <textarea rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-4" data-i18n="btn-send">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <script>
+        fetch('navbar.html') // (or 'navbar.html' if on index.html)
+            .then(response => response.text())
+            .then(data => {
+                // Paste the navbar onto the screen
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // THE FIX: Now that the navbar exists, turn on the buttons!
+                if (typeof initNavbarFeatures === 'function') {
+                    initNavbarFeatures();
+                }
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
+

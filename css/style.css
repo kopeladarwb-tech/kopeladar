@@ -86,11 +86,15 @@ h4,
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
 }
 
 [class*="col-"] {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 .col-1 {
@@ -498,8 +502,10 @@ h4,
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 900px;
+    width: 100%;
+    max-width: 100%;
     color: var(--white);
+    padding-left: 20px;
 }
 
 .hero-content .sub-title {
@@ -704,7 +710,7 @@ h4,
 }
 
 .stat-item p {
-    font-size: 0.9rem;
+    font-size: 0.65rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -1381,9 +1387,30 @@ h4,
 }
 
 .footer-logo {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Keeps them aligned to the left of the column */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    height: 250px; /* Slightly larger for the stacked layout */
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Maintains the circular shape */
+    background: var(--white);
+    padding: 5px;
+    box-shadow: var(--shadow-sm);
+}
+
+.footer-logo span {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Adjusted for better proportions when stacked */
+    color: var(--white);
+    letter-spacing: 1px;
+    display: block;
 }
 
 .social-links a {
@@ -1395,11 +1422,13 @@ h4,
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    color: #d4af37;
 }
 
 .social-links a:hover {
     background: var(--accent);
     transform: translateY(-5px);
+    color: var(--primary);
 }
 
 /* RESPONSIVE */
@@ -2073,24 +2102,24 @@ body.dark-mode .chairman-text p {
     opacity: 0;
 }
 
-/* HERO VIDEO */
+/* HERO IMAGE STYLES */
 .hero.relative-overflow {
     position: relative;
     overflow: hidden;
+    height: 100vh; /* Ensures the section takes full screen height */
 }
 
-.hero-video {
+.hero-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
-    object-fit: cover;
-    filter: brightness(0.7) contrast(1.1);
+    /* This makes the image act like a background-cover */
+    object-fit: cover; 
+    object-position: center;
+    filter: brightness(0.6) contrast(1.1); /* Slightly darker for better text readability */
 }
 
 .hero-overlay-gradient {
@@ -2103,25 +2132,50 @@ body.dark-mode .chairman-text p {
     z-index: 1;
 }
 
-body.dark-mode .hero-overlay-gradient {
-    background: linear-gradient(to right, rgba(10, 23, 17, 0.95) 0%, rgba(10, 23, 17, 0.6) 100%);
+/* Rest of your existing Z-index and layout classes */
+.relative-z {
+    position: relative;
+    z-index: 10;
+}/* HERO IMAGE STYLES */
+.hero.relative-overflow {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Ensures the section takes full screen height */
 }
 
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* This makes the image act like a background-cover */
+    object-fit: cover; 
+    object-position: center;
+    filter: brightness(0.6) contrast(1.1); /* Slightly darker for better text readability */
+}
+
+.hero-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(2, 44, 34, 0.95) 0%, rgba(2, 44, 34, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Rest of your existing Z-index and layout classes */
 .relative-z {
     position: relative;
     z-index: 10;
 }
-
-.relative-overflow {
-    position: relative;
-    overflow: hidden;
-}
-
 /* OVERSIZED WATERMARKS  */
 .huge-watermark {
     position: absolute;
     top: 10%;
-    left: -5%;
+    left: 0;
     font-family: 'Playfair Display', serif;
     font-size: clamp(8rem, 20vw, 15rem);
     font-weight: 900;
@@ -2131,13 +2185,15 @@ body.dark-mode .hero-overlay-gradient {
     pointer-events: none;
     white-space: nowrap;
     text-transform: uppercase;
+    min-width: 100%;
+    overflow: hidden;
 }
 
 .watermark-light {
     color: var(--white);
     opacity: 0.03;
     left: auto;
-    right: -5%;
+    right: 0;
 }
 
 /* MESH ORBS */
@@ -2147,6 +2203,7 @@ body.dark-mode .hero-overlay-gradient {
     filter: blur(80px);
     z-index: 0;
     pointer-events: none;
+    min-width: 100vw;
 }
 
 .orb-1 {
@@ -2936,4 +2993,196 @@ body.dark-mode .mega-footer {
     width: 0;
     height: 20px;
     transform: translateX(-50%);
+}
+
+/* VISIT & HOURS */
+.hours-card {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 60px 40px;
+    border-radius: 30px;
+    position: relative;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.hours-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-light);
+    color: var(--white);
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hours-row {
+    margin-bottom: 30px;
+}
+
+.hours-row h5 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.hours-row span {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+
+.btn-outline-dark {
+    border: 1px solid var(--primary-dark);
+    color: var(--primary-dark);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.btn-outline-dark:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+
+/* FAQ STYLES */
+#faq {
+    background-color: var(--light);
+}
+
+/* FAQ SECTION STYLING */
+.faq-item {
+    border-bottom: 1px solid var(--gray-border);
+    padding: 5px 0;
+    transition: var(--transition);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--primary-dark);
+    letter-spacing: 0.5px;
+    user-select: none;
+}
+
+.faq-question i {
+    color: var(--accent);
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+}
+
+/* Active State */
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Large enough for content */
+    padding-bottom: 20px;
+    transition: max-height 1s ease-in-out;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(135deg); /* Rotates plus to look like an X or minus */
+    color: var(--primary);
+}
+
+/* LINE FORM STYLING */
+.line-input-group {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.line-input-group label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.line-input-group input, 
+.line-input-group textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-family: 'Outfit', sans-serif;
+    outline: none;
+    color: var(--slate);
+}
+
+/* AESTHETIC CENTERED MAP */
+.section-padding-small {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.map-card-frame {
+    max-width: 900px; /* "Just enough" width */
+    margin: 0 auto; /* Centers the map */
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 8px solid var(--white); /* White border creates a 'frame' effect */
+    box-shadow: var(--shadow-lg);
+    line-height: 0;
+}
+
+.map-card-frame iframe {
+    filter: grayscale(0.3) contrast(1.1) brightness(0.9);
+    transition: var(--transition);
+}
+
+.map-card-frame:hover iframe {
+    filter: grayscale(0) contrast(1) brightness(1);
+}
+
+.map-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--glass);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.map-tag i {
+    color: var(--accent);
+}
+
+/* Mobile responsive height */
+@media (max-width: 768px) {
+    .map-card-frame {
+        max-width: 100%;
+        border-width: 4px;
+    }
+    .map-card-frame iframe {
+        height: 300px;
+    }
 }

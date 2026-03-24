@@ -83,8 +83,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="index.html#contact" data-i18n="nav-contact">Hubungi Kami</a></li>
-                    <li><a href="admin/login.php"><i class="fas fa-user-shield"></i> Log In</a></li>
+                    <li><a href="contact.html" data-i18n="nav-contact">Hubungi Kami</a></li>
                 </ul>
             </nav>
 
@@ -104,29 +103,27 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero relative-overflow">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay-gradient"></div>
-        <div class="container relative-z">
-            <div class="hero-content">
-                <h6 class="sub-title" data-aos="fade-up">ESTABLISHED 1974</h6>
-                <h1 data-aos="fade-up" data-aos-delay="100">
-                    <span data-i18n="hero-title-1">Pioneering</span><br>
-                    <span class="accent" data-i18n="hero-title-2">Corporate Excellence</span>
-                </h1>
-                <p data-aos="fade-up" data-aos-delay="200" data-i18n="hero-subtitle">Empowering the community of
-                    Kelantan through sustainable business ventures and professional services for over 50 years.</p>
-                <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#ventures" class="btn btn-primary" data-i18n="btn-explore">Explore Ventures <i
-                            class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-outline" data-i18n="btn-contact">Get In Touch</a>
-                </div>
+   <section id="home" class="hero relative-overflow">
+    <img src="img/hero1.png" alt="KOPELADAR Hero Image" class="hero-image">
+    
+    <div class="hero-overlay-gradient"></div>
+    <div class="container relative-z">
+        <div class="hero-content">
+            <h6 class="sub-title" data-aos="fade-up">ESTABLISHED 1974</h6>
+            <h1 data-aos="fade-up" data-aos-delay="100">
+                <span data-i18n="hero-title-1">Pioneering</span><br>
+                <span class="accent" data-i18n="hero-title-2">Corporate Excellence</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200" data-i18n="hero-subtitle">
+                Empowering the community of Kelantan through sustainable business ventures and professional services for over 50 years.
+            </p>
+            <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
+                <a href="#ventures" class="btn btn-primary" data-i18n="btn-explore">Explore Ventures <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-outline" data-i18n="btn-contact">Get In Touch</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- CHAIRMAN MESSAGE -->
     <section id="chairman" class="chairman section-padding relative-overflow">
@@ -180,7 +177,7 @@
                         <circle class="progress" cx="50" cy="50" r="45" data-percent="100"></circle>
                     </svg>
                     <div class="stat-content">
-                        <span class="count" data-target="50">0</span>
+                        <span class="count" id="years-counter" data-target="50">0</span>
                         <p data-i18n="stat-years">Years Excellence</p>
                     </div>
                 </div>
@@ -433,41 +430,6 @@
             </div>
     </section>
 
-    <!-- CUSTOMER SERVICE (Khidmat Pelanggan) -->
-    <section id="customer-service" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h6 class="sub-title" data-i18n="nav-customer">Khidmat Pelanggan</h6>
-                <h2 data-i18n="customer-title">Excellence in Service</h2>
-            </div>
-            <div class="text-center" data-aos="fade-up">
-                <p style="font-size: 1.2rem; color: var(--gray-dark);">We are committed to providing the best service to
-                    our members and customers.</p>
-                <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">Contact Support</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CAREERS SECTION -->
-    <section id="careers" class="careers section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h6 class="sub-title" data-i18n="careers-tag">CAREERS</h6>
-                <h2 data-i18n="careers-title">Join Our Professional Team</h2>
-            </div>
-            <div class="careers-list" data-aos="fade-up">
-                <div class="career-item">
-                    <div class="career-info">
-                        <h4 data-i18n="job-1-title">Management Trainee</h4>
-                        <p data-i18n="job-1-desc">Seeking energetic individuals to join our professional corporate
-                            development program.</p>
-                    </div>
-                    <a href="#contact" class="btn btn-primary" data-i18n="btn-apply">Apply Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- NEWS & ANNOUNCEMENTS -->
     <section id="news" class="section-padding bg-light">
     <div class="container">
@@ -488,29 +450,28 @@
     </div>
 </section>
 
-    <!-- DOWNLOADS SECTION -->
     <section id="downloads" class="downloads section-padding">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h6 class="sub-title" data-i18n="downloads-tag">CORPORATE RESOURCES</h6>
-                <h2 data-i18n="downloads-title">Official Forms & Publications</h2>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <h6 class="sub-title" data-i18n="downloads-tag">CORPORATE RESOURCES</h6>
+            <h2 data-i18n="downloads-title">Official Forms & Publications</h2>
+        </div>
+        <div class="downloads-grid">
+            <div class="download-item" data-aos="fade-up">
+                <i class="fas fa-file-pdf"></i>
+                <h4 data-i18n="doc-1-title">Membership Withdrawal Form</h4>
+                <p>Official form for members intending to withdraw from the cooperative and claim share capital.</p>
+                <a href="docs/Borang Tarik Diri Koop.pdf" download="KOPELADAR_Membership_Form" class="btn btn-primary" style="margin-top: 15px;" data-i18n="btn-download">Download</a>
             </div>
-            <div class="downloads-grid">
-                <div class="download-item" data-aos="fade-up">
-                    <i class="fas fa-file-pdf"></i>
-                    <h4 data-i18n="doc-1-title">Membership Form</h4>
-                    <p>Official registration document for new members.</p>
-                    <a href="#" class="btn btn-primary" style="margin-top: 15px;" data-i18n="btn-download">Download</a>
-                </div>
-                <div class="download-item" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-file-pdf"></i>
-                    <h4 data-i18n="doc-2-title">Annual Report 2024</h4>
-                    <p>Comprehensive overview of corporate performance.</p>
-                    <a href="#" class="btn btn-primary" style="margin-top: 15px;" data-i18n="btn-download">Download</a>
-                </div>
+            <div class="download-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-file-pdf"></i>
+                <h4 data-i18n="doc-2-title">Share Capital Claim Form (Heirs)</h4>
+                <p>Application form for nominees or legal heirs to claim share capital of a deceased member.</p>
+                <a href="docs/BORANG TUNTUTAN MODAL SYER OLEH WASI.pdf" download="KOPELADAR_Annual_Report_2024" class="btn btn-primary" style="margin-top: 15px;" data-i18n="btn-download">Download</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact section-padding bg-light">
@@ -647,14 +608,12 @@
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Use</a>
-                    <a href="admin/login.php" style="margin-left: 20px; color: var(--gray-dark);">Admin Login</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <!-- Navigation is now inlined and initialized in main.js for file:// compatibility -->
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>

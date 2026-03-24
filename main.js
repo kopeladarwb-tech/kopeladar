@@ -101,8 +101,8 @@ const translations = {
         'btn-apply': 'Apply Now',
         'downloads-tag': 'RESOURCES',
         'downloads-title': 'Forms & Documents',
-        'doc-1-title': 'Membership Form',
-        'doc-2-title': 'Annual Report 2024',
+        'doc-1-title': 'Membership Withdrawal Form',
+        'doc-2-title': 'Share Capital Claim Form (Heirs)',
         'btn-download': 'Download PDF',
         'chairman-title': 'Message From Our Chairman',
         'chairman-msg': '"It is my great honor to lead KOPELADAR. Our commitment to excellence and community development remains our top priority as we navigate the modern economic landscape."',
@@ -228,8 +228,8 @@ const translations = {
         'btn-apply': 'Mohon Sekarang',
         'downloads-tag': 'SUMBER',
         'downloads-title': 'Borang & Dokumen',
-        'doc-1-title': 'Borang Keahlian',
-        'doc-2-title': 'Laporan Tahunan 2024',
+        'doc-1-title': 'Borang Penarikan Diri Anggota',
+        'doc-2-title': 'Borang Tuntutan Modal Syer (Wasi)',
         'btn-download': 'Muat Turun PDF',
         'chairman-title': 'Perutusan Daripada Pengerusi',
         'chairman-msg': '"Adalah menjadi penghormatan besar bagi saya untuk memimpin KOPELADAR. Komitmen kami terhadap kecemerlangan dan pembangunan komuniti kekal sebagai keutamaan utama kami."',
@@ -645,6 +645,23 @@ function buildOfficeChart() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    
+
+    const updateYearTarget = () => {
+        const yearsSpan = document.getElementById('years-counter');
+        if (yearsSpan) {
+            const startYear = 1997; // KOPELADAR establishment year
+            const currentYear = new Date().getFullYear();
+            const difference = currentYear - startYear;
+            
+            // Update the data-target attribute dynamically
+            yearsSpan.setAttribute('data-target', difference);
+        }
+    };
+
+    // Run the update before starting other animations
+    updateYearTarget();
+
     fetchActivities();
     buildOrgChart();
     buildBoardGrid();
@@ -728,6 +745,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Call the data fetch
     fetchDynamicData();
+
+// FAQ INTERACTIVITY
+const initFAQ = () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all open items for a clean accordion effect
+            faqItems.forEach(el => el.classList.remove('active'));
+            
+            // Toggle the clicked item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+};
+
+// Call this inside your main DOMContentLoaded block
+initFAQ();
 
 
     // SCROLL ANIMATIONS (AOS)
