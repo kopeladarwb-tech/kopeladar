@@ -8,8 +8,7 @@ const translations = {
         'nav-board': 'Board of Directors',
         'nav-management-team': 'Management Team',
         'nav-organization': 'Organizational Structure',
-        'nav-careers': 'Careers',
-        'nav-customer': 'Customer Service',
+        'nav-news': 'News & Announcements',
         'nav-downloads': 'Form Downloads',
         'nav-ventures': 'Business',
         'nav-contact': 'Contact Us',
@@ -23,11 +22,13 @@ const translations = {
         'about-title': 'Legacy of Trust & Growth',
         'years-exp': 'Years of Excellence',
         'vision-title': 'Our Vision',
-        'vision-desc': 'To be a premier cooperative that empowers the socio-economic development of Ladang Rakyat participants and the wider Kelantan community.',
+        'vision-desc': 'To be a leading catalyst for the economic prosperity and well-being of our members.',
         'mission-title': 'Our Mission',
-        'mission-1': 'Delivering professional and transparent financial services.',
-        'mission-2': 'Expanding business portfolios in property and retail.',
-        'mission-3': 'Fostering a culture of innovation and integrity.',
+        'mission-1': 'To drive sustainable business growth that generates value and empowers the socio-economic standing of all KOPELADAR members.',
+        'mission-2': '',
+        'mission-3': '',
+        'motto-title': 'Our Motto',
+        'motto-desc': 'Empowering Business, Uplifting the Ummah.',
         'btn-more': 'Read More',
         'ventures-tag': 'OUR BUSINESS',
         'ventures-title': 'Diversified Ventures',
@@ -85,6 +86,8 @@ const translations = {
         'v-hall-f2-desc': 'Integrated catering options with diverse menu selections.',
         'v-hall-f3-title': 'Flexible Capacity',
         'v-hall-f3-desc': 'Spaces ranging from executive boardrooms to grand halls.',
+        'v-contact-title': 'Let’s Build the Future Together',
+        'v-contact-desc': 'Have questions about our services or want to become a member? Reach out to us, and our team will be happy to assist you.',
         'management-tag': 'LEADERSHIP',
         'management-title': 'Professional Board of Directors',
         'board-title': 'Board of Directors',
@@ -125,7 +128,21 @@ const translations = {
         'stat-assets': 'RM Million Assets',
         'stat-projects': 'Service Districts',
         'timeline-title': 'Legacy of Growth',
-        'footer-text': '© 2026 Koperasi Perkhidmatan Pelajaran Kelantan Berhad. All Rights Reserved.'
+        'footer-text': '© 2026 Koperasi Perkhidmatan Pelajaran Kelantan Berhad. All Rights Reserved.',
+        'pp-title': '1. Information Collection',
+        'pp-desc': 'KOPELADAR Berhad values your privacy. This is a static website and we do not automatically collect personal data or use cookies for tracking. We only collect information (Name, Email, Phone) that you voluntarily provide through our contact forms.',
+        'pp-title-2': '2. Use of Data',
+        'pp-desc-2': 'Information submitted via email or inquiry forms is used solely to respond to your requests. We do not sell or share your data with third parties.',
+        'tou-title': '1. Acceptance',
+        'tou-desc': 'By using this website, you agree to these terms. Content is for informational purposes only.',
+        'tou-title-2': '2. Intellectual Property',
+        'tou-desc-2': 'All logos, text, and images related to KOPELADAR are protected by copyright. Unauthorized use is prohibited.',
+        'tou-title-3': '3. Links to Third Parties',
+        'tou-desc-3': 'This website may contain links to external sites. KOPELADAR is not responsible for the content or privacy practices of these sites.',
+        'tou-title-4': '4. Disclaimer',
+        'tou-desc-4': 'We strive for accuracy, but we do not guarantee that the information on this website is free of errors or omissions.',
+        'tou-title-5': '5. Changes to Terms',
+        'tou-desc-5': 'We reserve the right to modify these terms at any time.',
     },
     'ms': {
         'nav-home': 'Utama',
@@ -135,8 +152,7 @@ const translations = {
         'nav-board': 'Lembaga Kopeladar',
         'nav-management-team': 'Barisan Pengurusan',
         'nav-organization': 'Struktur Organisasi',
-        'nav-careers': 'Kerjaya',
-        'nav-customer': 'Khidmat Pelanggan',
+        'nav-news': 'Berita & Pengumuman',
         'nav-downloads': 'Muat Turun Borang',
         'nav-ventures': 'Perniagaan',
         'nav-contact': 'Hubungi Kami',
@@ -152,9 +168,11 @@ const translations = {
         'vision-title': 'Visi Kami',
         'vision-desc': 'Menjadi koperasi terkemuka yang memperkasa pembangunan sosio-ekonomi Peserta Ladang Rakyat dan seluruh komuniti Negeri Kelantan.',
         'mission-title': 'Misi Kami',
-        'mission-1': 'Menyampaikan perkhidmatan kewangan yang profesional dan telus.',
-        'mission-2': 'Mengembangkan portfolio perniagaan dalam hartanah dan peruncitan.',
-        'mission-3': 'Memupuk budaya inovasi dan integriti.',
+        'mission-1': 'Melestarikan pertumbuhan perniagaan yang kompetitif demi menjana keuntungan serta memperkasa taraf sosio-ekonomi seluruh anggota KOPELADAR.',
+        'mission-2': '',
+        'mission-3': '',
+        'motto-title': 'Motto Kami',
+        'motto-desc': 'Perniagaan Membina Ummah Sejahtera.',
         'btn-more': 'Baca Lagi',
         'ventures-tag': 'PERNIAGAAN KAMI',
         'ventures-title': 'Pelbagai Bidang Perniagaan',
@@ -212,6 +230,8 @@ const translations = {
         'v-hall-f2-desc': 'Pilihan katering bersepadu dengan pelbagai pilihan menu.',
         'v-hall-f3-title': 'Kapasiti Fleksibel',
         'v-hall-f3-desc': 'Ruang merangkumi bilik mesyuarat eksekutif sehingga dewan besar.',
+        'v-contact-title': 'Membina Masa Hadapan Bersama',
+        'v-contact-desc': 'Mempunyai sebarang pertanyaan mengenai perkhidmatan kami atau ingin menjadi anggota? Hubungi kami, dan warga kerja kami sedia membantu anda.',
         'management-tag': 'KEPIMPINAN',
         'management-title': 'Barisan Pengurusan Profesional',
         'board-title': 'Lembaga Pengarah',
@@ -252,7 +272,21 @@ const translations = {
         'stat-assets': 'Aset RM Juta',
         'stat-projects': 'Peringkat Kawasan',
         'timeline-title': 'Warisan Pertumbuhan',
-        'footer-text': '© 2026 Koperasi Perkhidmatan Pelajaran Kelantan Berhad. Hak Cipta Terpelihara.'
+        'footer-text': '© 2026 Koperasi Perkhidmatan Pelajaran Kelantan Berhad. Hak Cipta Terpelihara.',
+        'pp-title': '1. Pengumpulan Maklumat',
+        'pp-desc': 'KOPELADAR Berhad menghargai privasi anda. Laman web ini adalah statik dan kami tidak mengumpul data peribadi secara automatik. Kami hanya mengumpul maklumat yang anda berikan secara sukarela melalui borang hubungan.',
+        'pp-title-2': '2. Penggunaan Data',
+        'pp-desc-2': 'Maklumat yang dihantar melalui emel atau borang pertanyaan digunakan hanya untuk maklum balas. Kami tidak akan menjual atau berkongsi data anda kepada pihak ketiga.',
+        'tou-title': '1. Penerimaan',
+        'tou-desc': 'Dengan menggunakan laman web ini, anda bersetuju dengan terma ini. Kandungan adalah untuk tujuan maklumat sahaja.',
+        'tou-title-2': '2. Harta Intelek',
+        'tou-desc-2': 'Semua logo, teks, dan imej yang berkaitan dengan KOPELADAR dilindungi oleh hak cipta. Penggunaan tanpa kebenaran adalah dilarang.',
+        'tou-title-3': '3. Pautan Pihak Ketiga',
+        'tou-desc-3': 'Laman web ini mungkin mengandungi pautan ke laman web luaran. KOPELADAR tidak bertanggungjawab terhadap kandungan atau amalan privasi laman web ini.',
+        'tou-title-4': '4. Penafian',
+        'tou-desc-4': 'Kami berusaha untuk ketepatan, tetapi kami tidak menjamin bahawa maklumat di laman web ini bebas daripada kesilapan atau peninggalan.',
+        'tou-title-5': '5. Perubahan Terma',
+        'tou-desc-5': 'Kami berhak untuk mengubah terma ini pada bila-bila masa.',
     }
 };
 
@@ -436,13 +470,13 @@ async function fetchActivities() {
         let html = '';
         events.forEach((event, index) => {
             const delay = (index % 3) * 100; // Staggers the animation
-            
+
             // Format the date neatly
             const eventDate = new Date(event.date).toLocaleDateString('en-MY', { day: 'numeric', month: 'short', year: 'numeric' });
-            
+
             // Fallback image just in case the client forgets to upload one
             const img = event.image || 'https://placehold.co/600x400/022c22/ffffff?text=KOPELADAR+Event';
-            
+
             // Trim the description so the cards stay the same height
             const desc = event.description ? event.description.substring(0, 90) + '...' : 'Click to read more about this event.';
 
@@ -645,7 +679,7 @@ function buildOfficeChart() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    
+
 
     const updateYearTarget = () => {
         const yearsSpan = document.getElementById('years-counter');
@@ -653,7 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const startYear = 1997; // KOPELADAR establishment year
             const currentYear = new Date().getFullYear();
             const difference = currentYear - startYear;
-            
+
             // Update the data-target attribute dynamically
             yearsSpan.setAttribute('data-target', difference);
         }
@@ -746,29 +780,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call the data fetch
     fetchDynamicData();
 
-// FAQ INTERACTIVITY
-const initFAQ = () => {
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all open items for a clean accordion effect
-            faqItems.forEach(el => el.classList.remove('active'));
-            
-            // Toggle the clicked item
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
-    });
-};
+    // FAQ INTERACTIVITY
+    const initFAQ = () => {
+        const faqItems = document.querySelectorAll('.faq-item');
 
-// Call this inside your main DOMContentLoaded block
-initFAQ();
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all open items for a clean accordion effect
+                faqItems.forEach(el => el.classList.remove('active'));
+
+                // Toggle the clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    };
+
+    // Call this inside your main DOMContentLoaded block
+    initFAQ();
 
 
     // SCROLL ANIMATIONS (AOS)

@@ -622,7 +622,7 @@ h4,
 }
 
 .vm-card {
-    padding: 40px;
+    padding: 30px;
     background: var(--white);
     border-radius: 20px;
     border: 1px solid var(--gray-border);
@@ -638,12 +638,12 @@ h4,
 .vm-card i {
     font-size: 2rem;
     color: var(--accent);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     display: inline-block;
 }
 
 .vm-card h4 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 1.5rem;
     color: var(--primary);
 }
@@ -1388,17 +1388,21 @@ h4,
 
 .footer-logo {
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: flex-start; /* Keeps them aligned to the left of the column */
+    flex-direction: column;
+    /* Stacks items vertically */
+    align-items: flex-start;
+    /* Keeps them aligned to the left of the column */
     gap: 15px;
     margin-bottom: 25px;
 }
 
 .footer-logo img {
-    height: 250px; /* Slightly larger for the stacked layout */
+    height: 250px;
+    /* Slightly larger for the stacked layout */
     width: 250px;
     object-fit: cover;
-    border-radius: 50%; /* Maintains the circular shape */
+    border-radius: 50%;
+    /* Maintains the circular shape */
     background: var(--white);
     padding: 5px;
     box-shadow: var(--shadow-sm);
@@ -1407,7 +1411,8 @@ h4,
 .footer-logo span {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: 1.8rem; /* Adjusted for better proportions when stacked */
+    font-size: 1.8rem;
+    /* Adjusted for better proportions when stacked */
     color: var(--white);
     letter-spacing: 1px;
     display: block;
@@ -2106,7 +2111,8 @@ body.dark-mode .chairman-text p {
 .hero.relative-overflow {
     position: relative;
     overflow: hidden;
-    height: 100vh; /* Ensures the section takes full screen height */
+    height: 100vh;
+    /* Ensures the section takes full screen height */
 }
 
 .hero-image {
@@ -2117,9 +2123,10 @@ body.dark-mode .chairman-text p {
     height: 100%;
     z-index: 0;
     /* This makes the image act like a background-cover */
-    object-fit: cover; 
+    object-fit: cover;
     object-position: center;
-    filter: brightness(0.6) contrast(1.1); /* Slightly darker for better text readability */
+    filter: brightness(0.6) contrast(1.1);
+    /* Slightly darker for better text readability */
 }
 
 .hero-overlay-gradient {
@@ -2136,11 +2143,14 @@ body.dark-mode .chairman-text p {
 .relative-z {
     position: relative;
     z-index: 10;
-}/* HERO IMAGE STYLES */
+}
+
+/* HERO IMAGE STYLES */
 .hero.relative-overflow {
     position: relative;
     overflow: hidden;
-    height: 100vh; /* Ensures the section takes full screen height */
+    height: 100vh;
+    /* Ensures the section takes full screen height */
 }
 
 .hero-image {
@@ -2151,9 +2161,10 @@ body.dark-mode .chairman-text p {
     height: 100%;
     z-index: 0;
     /* This makes the image act like a background-cover */
-    object-fit: cover; 
+    object-fit: cover;
     object-position: center;
-    filter: brightness(0.6) contrast(1.1); /* Slightly darker for better text readability */
+    filter: brightness(0.6) contrast(1.1);
+    /* Slightly darker for better text readability */
 }
 
 .hero-overlay-gradient {
@@ -2171,6 +2182,7 @@ body.dark-mode .chairman-text p {
     position: relative;
     z-index: 10;
 }
+
 /* OVERSIZED WATERMARKS  */
 .huge-watermark {
     position: absolute;
@@ -3040,6 +3052,7 @@ body.dark-mode .mega-footer {
     border: 1px solid var(--primary-dark);
     color: var(--primary-dark);
     padding: 12px 30px;
+    margin-top: 15px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 0.8rem;
@@ -3092,13 +3105,15 @@ body.dark-mode .mega-footer {
 
 /* Active State */
 .faq-item.active .faq-answer {
-    max-height: 500px; /* Large enough for content */
+    max-height: 500px;
+    /* Large enough for content */
     padding-bottom: 20px;
     transition: max-height 1s ease-in-out;
 }
 
 .faq-item.active .faq-question i {
-    transform: rotate(135deg); /* Rotates plus to look like an X or minus */
+    transform: rotate(135deg);
+    /* Rotates plus to look like an X or minus */
     color: var(--primary);
 }
 
@@ -3117,7 +3132,7 @@ body.dark-mode .mega-footer {
     margin-bottom: 5px;
 }
 
-.line-input-group input, 
+.line-input-group input,
 .line-input-group textarea {
     width: 100%;
     border: none;
@@ -3135,12 +3150,15 @@ body.dark-mode .mega-footer {
 }
 
 .map-card-frame {
-    max-width: 900px; /* "Just enough" width */
-    margin: 0 auto; /* Centers the map */
+    max-width: 900px;
+    /* "Just enough" width */
+    margin: 0 auto;
+    /* Centers the map */
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    border: 8px solid var(--white); /* White border creates a 'frame' effect */
+    border: 8px solid var(--white);
+    /* White border creates a 'frame' effect */
     box-shadow: var(--shadow-lg);
     line-height: 0;
 }
@@ -3182,6 +3200,7 @@ body.dark-mode .mega-footer {
         max-width: 100%;
         border-width: 4px;
     }
+
     .map-card-frame iframe {
         height: 300px;
     }
