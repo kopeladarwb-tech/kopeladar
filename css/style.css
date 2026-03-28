@@ -42,6 +42,8 @@ body {
     background-color: var(--white);
     line-height: 1.7;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 /* CUSTOM SELECTION COLOR */
@@ -438,6 +440,22 @@ h4,
     .chairman-text {
         padding-left: 0 !important;
         margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 1.1rem;
+        /* Shrinks text to fit */
+    }
+
+    .nav-wrapper {
+        padding: 0 10px;
+    }
+
+    /* Ensure the mobile toggle is always visible on the far right */
+    .header-right {
+        margin-left: auto;
     }
 }
 
@@ -2240,6 +2258,40 @@ body.dark-mode .chairman-text p {
     background: rgba(0, 184, 74, 0.1);
     top: 30%;
     right: 10%;
+}
+
+@media (max-width: 768px) {
+    .huge-watermark {
+        display: none;
+        /* These rarely work well on small screens */
+    }
+
+    .mesh-orb {
+        max-width: 100%;
+        /* Prevents orbs from stretching the screen */
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    /* 3. Fix the Hero Content */
+    .hero-content {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        text-align: center;
+        /* Centers text to make it feel more "balanced" */
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        /* Stacks buttons so they don't overflow */
+        align-items: center;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* SVG STATS RINGS */
